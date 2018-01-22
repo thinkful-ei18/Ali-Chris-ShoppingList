@@ -52,5 +52,7 @@ const store = (function (){
     findAndToggleChecked: store.findAndToggleChecked,
     findAndUpdateName: store.findAndUpdateName,
     findAndDelete: store.findAndDelete,
+    toggleCheckedFilter: store.toggleCheckedFilter,
+    setSearchTerm: store.setSearchTerm,
   };
 }() );
