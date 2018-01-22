@@ -1,13 +1,13 @@
 'use strict';
 
 const Item = (function (){
-  const validateName = function (name) {
+  const validateName = function(name) {
     if (!name) {
-      Error('Name does not exist');
+      throw new Error('Name does not exist');
     }
   };
 
-  const create = function (name) {
+  const create = function(name) {
     return {
       id: cuid(),
       name: name,
@@ -16,7 +16,7 @@ const Item = (function (){
   };
 
   return {
-    validateName,
-    create
+    validateName: validateName,
+    create: create,
   };
 }() );

@@ -8,12 +8,12 @@ $(document).ready(function() {
   shoppingList.bindEventListeners();
   shoppingList.render();
 
-  const itemNames = [ '', 'apples', 'pears' ];
+  const itemNames = ['', 'apples', 'pears'];
   itemNames.forEach(name => {
     try {
       Item.validateName(name);
       store.items.push(Item.create(name));
-    } catch(error) {
+    } catch (error) {
       console.log('Cannot add item: ' + error.message);
     }
   });
