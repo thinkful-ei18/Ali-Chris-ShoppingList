@@ -55,17 +55,6 @@ const shoppingList = (function(){
     $('.js-shopping-list').html(shoppingListItemsString);
   }
   
-  
-  // function addItemToShoppingList(itemName) {
-  //   try {
-  //     Item.validateName(itemName);
-  //     store.items.push(Item.create(itemName));
-  //     render();
-  //   } catch(e) {
-  //     console.log('Cannot add item' + e);
-  //   }
-  // }
-  
   function handleNewItemSubmit() {
     $('#js-shopping-list-form').submit(function (event) {
       event.preventDefault();
@@ -75,12 +64,6 @@ const shoppingList = (function(){
       render();
     });
   }
-  
-  // function toggleCheckedForListItem(id) {
-  //   const foundItem = store.items.find(item => item.id === id);
-  //   foundItem.checked = !foundItem.checked;
-  // }
-  
   
   function getItemIdFromElement(item) {
     return $(item)
@@ -95,25 +78,6 @@ const shoppingList = (function(){
       render();
     });
   }
-  
-  // function deleteListItem(id) {
-  //   const index = store.items.findIndex(item => item.id === id);
-  //   store.items.splice(index, 1);
-  // }
-  
-  // function editListItemName(id, itemName) {
-  //   const item = store.items.find(item => item.id === id);
-  //   item.name = itemName;
-  // }
-  
-  // function toggleCheckedItemsFilter() {
-  //   store.hideCheckedItems = !store.hideCheckedItems;
-  // }
-  
-  // function setSearchTerm(val) {
-  //   store.searchTerm = val;
-  // }
-  
   
   function handleDeleteItemClicked() {
     // like in `handleItemCheckClicked`, we use event delegation
