@@ -12,7 +12,7 @@ const store = (function (){
     hideCheckedItems: false,
     searchTerm: '',
     findById: function (id) {
-      return store.items.find(id);
+      return this.items.find(item => item.id === id);
     },
     addItem: function (name) {
       try {
@@ -36,6 +36,7 @@ const store = (function (){
     findAndDelete: function (id) {
       this.items = this.items.filter(val => val.id !== id);
     },
+    
   };
   return {
     items: store.items,
