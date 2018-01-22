@@ -56,15 +56,15 @@ const shoppingList = (function(){
   }
   
   
-  function addItemToShoppingList(itemName) {
-    try {
-      Item.validateName(itemName);
-      store.items.push(Item.create(itemName));
-      render();
-    } catch(e) {
-      console.log('Cannot add item' + e);
-    }
-  }
+  // function addItemToShoppingList(itemName) {
+  //   try {
+  //     Item.validateName(itemName);
+  //     store.items.push(Item.create(itemName));
+  //     render();
+  //   } catch(e) {
+  //     console.log('Cannot add item' + e);
+  //   }
+  // }
   
   function handleNewItemSubmit() {
     $('#js-shopping-list-form').submit(function (event) {
