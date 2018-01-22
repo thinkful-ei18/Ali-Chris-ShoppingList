@@ -16,7 +16,7 @@ const Item = (function (){
   };
 
   return {
-    validateName: validateName,
-    create: create,
+    validateName,
+    create,
   };
 }() );
