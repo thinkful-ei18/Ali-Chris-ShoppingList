@@ -36,7 +36,12 @@ const store = (function (){
     findAndDelete: function (id) {
       this.items = this.items.filter(val => val.id !== id);
     },
-    
+    toggleCheckedFilter: function () {
+      this.hideCheckedItems = !this.hideCheckedItems;
+    },
+    setSearchTerm: function (val) {
+      this.searchTerm = val;
+    }
   };
   return {
     items: store.items,
